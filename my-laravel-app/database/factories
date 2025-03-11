@@ -1,0 +1,68 @@
+// filepath: my-laravel-app/my-laravel-app/database/factories/ContactFactory.php
+use App\Models\Contact;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class ContactFactory extends Factory
+{
+    protected $model = Contact::class;
+
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->name,
+            'email' => $this->faker->unique()->safeEmail,
+            'message' => $this->faker->text,
+        ];
+    }
+}
+
+// filepath: my-laravel-app/my-laravel-app/database/factories/ProjectFactory.php
+use App\Models\Project;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class ProjectFactory extends Factory
+{
+    protected $model = Project::class;
+
+    public function definition()
+    {
+        return [
+            'title' => $this->faker->sentence,
+            'description' => $this->faker->paragraph,
+            'url' => $this->faker->url,
+        ];
+    }
+}
+
+// filepath: my-laravel-app/my-laravel-app/database/factories/ServiceFactory.php
+use App\Models\Service;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class ServiceFactory extends Factory
+{
+    protected $model = Service::class;
+
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->word,
+            'description' => $this->faker->paragraph,
+        ];
+    }
+}
+
+// filepath: my-laravel-app/my-laravel-app/database/factories/AboutFactory.php
+use App\Models\About;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class AboutFactory extends Factory
+{
+    protected $model = About::class;
+
+    public function definition()
+    {
+        return [
+            'content' => $this->faker->paragraph,
+        ];
+    }
+}

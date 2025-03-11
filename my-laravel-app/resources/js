@@ -1,0 +1,27 @@
+// filepath: my-laravel-app/my-laravel-app/resources/js/app.js
+import Vue from 'vue';
+import axios from 'axios';
+
+window.Vue = Vue;
+window.axios = axios;
+
+const app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Welcome to SoftCraft Lab!'
+    },
+    methods: {
+        fetchData() {
+            axios.get('/api/data')
+                .then(response => {
+                    this.message = response.data.message;
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+    },
+    mounted() {
+        this.fetchData();
+    }
+});

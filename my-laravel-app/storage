@@ -1,0 +1,4 @@
+The storage directory is typically used by Laravel to store logs, cache files, and other temporary files. Since this directory is meant to be a storage location and does not require specific contents, it will be intentionally left blank.
+
+storage
+<!-- This directory is intentionally left blank. -->

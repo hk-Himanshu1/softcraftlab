@@ -1,0 +1,19 @@
+// filepath: my-laravel-app/my-laravel-app/database/seeders/DatabaseSeeder.php
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class DatabaseSeeder extends Seeder
+{
+    public function run()
+    {
+        // Call other seeders here
+        // $this->call(ContactSeeder::class);
+        // $this->call(ProjectSeeder::class);
+        // $this->call(ServiceSeeder::class);
+        // $this->call(AboutSeeder::class);
+    }
+}

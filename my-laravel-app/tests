@@ -1,0 +1,44 @@
+// filepath: my-laravel-app/my-laravel-app/tests/Feature/PageControllerTest.php
+<?php
+
+namespace Tests\Feature;
+
+use Tests\TestCase;
+
+class PageControllerTest extends TestCase
+{
+    public function test_index_page()
+    {
+        $response = $this->get('/');
+        $response->assertStatus(200);
+        $response->assertViewIs('index');
+    }
+
+    public function test_about_page()
+    {
+        $response = $this->get('/about');
+        $response->assertStatus(200);
+        $response->assertViewIs('about');
+    }
+
+    public function test_contact_page()
+    {
+        $response = $this->get('/contact');
+        $response->assertStatus(200);
+        $response->assertViewIs('contact');
+    }
+
+    public function test_projects_page()
+    {
+        $response = $this->get('/projects');
+        $response->assertStatus(200);
+        $response->assertViewIs('projects');
+    }
+
+    public function test_services_page()
+    {
+        $response = $this->get('/services');
+        $response->assertStatus(200);
+        $response->assertViewIs('services');
+    }
+}
